@@ -119,12 +119,8 @@ public class QLearningAgent extends RLAgent {
 			this.qvaleurs.get(e).replace(a, d);
 		}
 
-
-		// mise a jour vmax et vmin pour affichage du gradient de couleur:
-				//vmax est la valeur de max pour tout s de V
-				//vmin est la valeur de min pour tout s de V
-				// ...
-		
+		if(this.vmax < d)
+			this.vmax = d;
 		
 		this.notifyObs();
 		

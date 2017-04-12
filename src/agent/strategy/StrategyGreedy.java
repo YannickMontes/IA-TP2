@@ -29,7 +29,9 @@ public class StrategyGreedy extends StrategyExploration{
 	public Action getAction(Etat _e) {//renvoi null si _e absorbant
 		double d =rand.nextDouble();
 		List<Action> actions;
-		if (this.agent.getActionsLegales(_e).isEmpty()){
+		List<Action> possiblesActions = this.agent.getActionsLegales(_e);
+		if (possiblesActions.isEmpty())
+		{
 			return null;
 		}
 	
