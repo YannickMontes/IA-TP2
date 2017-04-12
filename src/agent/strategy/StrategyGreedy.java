@@ -35,7 +35,7 @@ public class StrategyGreedy extends StrategyExploration{
 			return null;
 		}
 		Action returnedAction = null;
-		if(randNumber > this.epsilon)
+		if(randNumber < this.epsilon)
 		{
 			randNumber = (int)(rand.nextDouble() * (possiblesActions.size()));
 			returnedAction = possiblesActions.get((int)randNumber);
