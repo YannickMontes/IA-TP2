@@ -48,7 +48,7 @@ public class StrategyGreedy extends StrategyExploration{
 				randNumber = (int)(rand.nextDouble() * (bestActions.size()));
 				returnedAction = bestActions.get((int)randNumber);
 			}
-			else
+			else if(!bestActions.isEmpty())
 			{
 				returnedAction = bestActions.get(0);
 			}
